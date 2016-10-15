@@ -49,3 +49,5 @@ Temporary Items
 # VS build folders
 bin/
 obj/
+packages/
+*.csproj.user
