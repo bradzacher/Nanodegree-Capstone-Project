@@ -2271,6 +2271,9 @@ namespace Zacher
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f050019
+			public const int LogTag = 2131034137;
+			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
 			

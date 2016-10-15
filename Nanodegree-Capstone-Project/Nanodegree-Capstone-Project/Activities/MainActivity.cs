@@ -1,9 +1,12 @@
 using Android.App;
 using Android.Content.PM;
+using Android.Net.Http;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
+using Android.Util;
 using Android.Views;
+using Java.IO;
 using Zacher.Fragments;
 
 namespace Zacher.Activities
@@ -12,6 +15,8 @@ namespace Zacher.Activities
     // ReSharper disable once UnusedMember.Global
     public class MainActivity : BaseActivity
     {
+        private const long HttpCacheSize = 10 * 1024 * 1024; // 10 MiB
+
         private DrawerLayout _drawerLayout;
         private NavigationView _navigationView;
 
@@ -45,8 +50,7 @@ namespace Zacher.Activities
                         break;
                 }
 
-                Snackbar.Make(this._drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong)
-                    .Show();
+                Snackbar.Make(this._drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong).Show();
 
                 this._drawerLayout.CloseDrawers();
             };
@@ -54,7 +58,21 @@ namespace Zacher.Activities
 
             //if first time you will want to go ahead and click first item.
             if (savedInstanceState == null)
+            {
                 this.ListItemClicked(0);
+            }
+
+
+            // install the HTTP cache
+            try
+            {
+                var httpCacheDir = new File(this.GetExternalCacheDirs()[0], "http");
+                HttpResponseCache.Install(httpCacheDir, HttpCacheSize);
+            }
+            catch (IOException e)
+            {
+                Log.Info(this.GetString(Resource.String.LogTag), e, "HTTP response cache installation failed");
+            }
         }
 
         private int _oldPosition = -1;
