@@ -47,6 +47,9 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="NChart3D">
+      <HintPath>..\Components\NChart3D-2.5\lib\android\NChart3D.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -127,5 +130,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <XamarinComponentReference Include="NChart3D">
+      <Visible>False</Visible>
+      <Version>2.5</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
 </Project>
