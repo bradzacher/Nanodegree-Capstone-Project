@@ -18,7 +18,6 @@ namespace Zacher.Activities
                 this.SetSupportActionBar(this.Toolbar);
                 this.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
                 this.SupportActionBar.SetHomeButtonEnabled(true);
-
             }
         }
 
