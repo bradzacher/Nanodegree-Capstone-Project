@@ -4,7 +4,7 @@ using Android.Views;
 
 namespace Zacher.Fragments
 {
-    public class Fragment2 : Fragment
+    public class RadarFragment : Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -13,17 +13,17 @@ namespace Zacher.Fragments
             // Create your fragment here
         }
 
-        public static Fragment2 NewInstance()
+        // ReSharper disable once UnusedMember.Global
+        public static RadarFragment NewInstance()
         {
-            var frag2 = new Fragment2 { Arguments = new Bundle() };
-            return frag2;
+            return new RadarFragment { Arguments = new Bundle() };
         }
 
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.fragment2, null);
+            return inflater.Inflate(Resource.Layout.RadarFragment, null);
         }
     }
 }

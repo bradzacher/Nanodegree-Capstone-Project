@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/NavItemForecast"
+        android:icon="@drawable/ic_home_1"
+        android:title="Forecast" />
+    <item
+        android:id="@+id/NavItemRadar"
+        android:icon="@drawable/ic_home_2"
+        android:title="Radar" />
+    <item
+        android:id="@+id/NavItemSettings"
+        android:icon="@drawable/ic_home_2"
+        android:title="Settings" />
+  </group>
+
+</menu>

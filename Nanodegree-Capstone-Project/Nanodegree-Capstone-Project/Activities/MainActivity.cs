@@ -20,7 +20,7 @@ namespace Zacher.Activities
         private DrawerLayout _drawerLayout;
         private NavigationView _navigationView;
 
-        protected override int LayoutResource => Resource.Layout.main;
+        protected override int LayoutResource => Resource.Layout.MainActivity;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -76,12 +76,14 @@ namespace Zacher.Activities
             Android.Support.V4.App.Fragment fragment = null;
             switch (itemId)
             {
-                // todo - add my menu items
-                case Resource.Id.nav_home_1:
-                    fragment = Fragment1.NewInstance();
+                case Resource.Id.NavItemForecast:
+                    fragment = ForecastFragment.NewInstance();
                     break;
-                case Resource.Id.nav_home_2:
-                    fragment = Fragment2.NewInstance();
+                case Resource.Id.NavItemRadar:
+                    fragment = RadarFragment.NewInstance();
+                    break;
+                case Resource.Id.NavItemSettings:
+                    fragment = SettingsFragment.NewInstance();
                     break;
 
                 default:
