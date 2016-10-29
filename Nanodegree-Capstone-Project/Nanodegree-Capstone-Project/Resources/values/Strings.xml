@@ -4,8 +4,9 @@
   <string name="drawer_open">Open</string>
   <string name="drawer_close">Close</string>
   <string name="menu_refresh">Refresh</string>
-  <string name="fragment1">You are on Fragment 1</string>
-  <string name="fragment2">You are on Fragment 2</string>
+  <string name="fragment1">You are on Forecast Fragment</string>
+  <string name="fragment2">You are on Radar Fragment</string>
+  <string name="fragment3">You are on Settings Fragment</string>
 
   <string name="LogTag">ZacherCapstone</string>
 </resources>

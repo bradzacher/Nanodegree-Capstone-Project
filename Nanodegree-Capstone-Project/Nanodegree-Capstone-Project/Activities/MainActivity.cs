@@ -1,4 +1,4 @@
-using Android.App;
+using Android.Support.V4.App;
 using Android.Content.PM;
 using Android.Net.Http;
 using Android.OS;
@@ -11,7 +11,7 @@ using Zacher.Fragments;
 
 namespace Zacher.Activities
 {
-    [Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
+    [Android.App.Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
     // ReSharper disable once UnusedMember.Global
     public class MainActivity : BaseActivity
     {
@@ -20,19 +20,19 @@ namespace Zacher.Activities
         private DrawerLayout _drawerLayout;
         private NavigationView _navigationView;
 
-        protected override int LayoutResource => Resource.Layout.MainActivity;
+        protected override int LayoutResource => Resource.Layout.main_activity;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             
-            this._drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            this._drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.DrawerLayout);
 
             // Set hamburger items menu
             this.SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
 
             // setup navigation view
-            this._navigationView = this.FindViewById<NavigationView>(Resource.Id.nav_view);
+            this._navigationView = this.FindViewById<NavigationView>(Resource.Id.NavView);
 
             // handle navigation
             this._navigationView.NavigationItemSelected += (sender, e) =>
@@ -63,7 +63,7 @@ namespace Zacher.Activities
         }
 
         private int _oldItemId = -1;
-        private void ListItemClicked(int itemId = Resource.Id.nav_home_1) // default to the first item
+        private void ListItemClicked(int itemId = Resource.Id.NavItemForecast) // default to the first item
         {
             // this way we don't load twice, but you might want to modify this a bit.
             if (itemId == this._oldItemId)
@@ -73,7 +73,7 @@ namespace Zacher.Activities
 
             this._oldItemId = itemId;
 
-            Android.Support.V4.App.Fragment fragment = null;
+            Fragment fragment;
             switch (itemId)
             {
                 case Resource.Id.NavItemForecast:
@@ -92,7 +92,7 @@ namespace Zacher.Activities
             }
 
             this.SupportFragmentManager.BeginTransaction()
-                .Replace(Resource.Id.content_frame, fragment)
+                .Replace(Resource.Id.ContentFrame, fragment)
                 .Commit();
         }
 

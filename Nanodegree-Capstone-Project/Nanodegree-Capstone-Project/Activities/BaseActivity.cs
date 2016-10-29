@@ -12,7 +12,7 @@ namespace Zacher.Activities
         {
             base.OnCreate(bundle);
             this.SetContentView(this.LayoutResource);
-            this.Toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
+            this.Toolbar = this.FindViewById<Toolbar>(Resource.Id.Toolbar);
             if (this.Toolbar != null)
             {
                 this.SetSupportActionBar(this.Toolbar);
