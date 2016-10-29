@@ -6,6 +6,8 @@ namespace Zacher.Fragments
 {
     public class RadarFragment : Fragment
     {
+        public const int Title = Resource.String.fragment_title_radar;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

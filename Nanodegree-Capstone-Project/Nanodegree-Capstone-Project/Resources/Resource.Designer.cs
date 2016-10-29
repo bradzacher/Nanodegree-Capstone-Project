@@ -2916,8 +2916,8 @@ namespace Zacher
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090035
-			public const int LogTag = 2131296309;
+			// aapt resource value: 0x7f090038
+			public const int LogTag = 2131296312;
 			
 			// aapt resource value: 0x7f090002
 			public const int abc_action_bar_home_description = 2131296258;
@@ -3024,47 +3024,56 @@ namespace Zacher
 			// aapt resource value: 0x7f090025
 			public const int character_counter_pattern = 2131296293;
 			
-			// aapt resource value: 0x7f090032
-			public const int fragment1 = 2131296306;
+			// aapt resource value: 0x7f090035
+			public const int fragment1 = 2131296309;
 			
-			// aapt resource value: 0x7f090033
-			public const int fragment2 = 2131296307;
+			// aapt resource value: 0x7f090036
+			public const int fragment2 = 2131296310;
 			
-			// aapt resource value: 0x7f090034
-			public const int fragment3 = 2131296308;
+			// aapt resource value: 0x7f090037
+			public const int fragment3 = 2131296311;
 			
 			// aapt resource value: 0x7f090027
-			public const int menu = 2131296295;
-			
-			// aapt resource value: 0x7f09002c
-			public const int pref_default_measurement_units = 2131296300;
-			
-			// aapt resource value: 0x7f09002b
-			public const int pref_default_notification_time = 2131296299;
+			public const int fragment_title_forecast = 2131296295;
 			
 			// aapt resource value: 0x7f090028
-			public const int pref_notification_time = 2131296296;
+			public const int fragment_title_radar = 2131296296;
 			
 			// aapt resource value: 0x7f090029
-			public const int pref_notification_time_summary = 2131296297;
+			public const int fragment_title_settings = 2131296297;
 			
 			// aapt resource value: 0x7f09002a
-			public const int pref_notification_time_summary_selected = 2131296298;
-			
-			// aapt resource value: 0x7f09002e
-			public const int pref_time_negative_response = 2131296302;
-			
-			// aapt resource value: 0x7f09002d
-			public const int pref_time_positive_response = 2131296301;
+			public const int menu = 2131296298;
 			
 			// aapt resource value: 0x7f09002f
-			public const int pref_units = 2131296303;
+			public const int pref_default_measurement_units = 2131296303;
+			
+			// aapt resource value: 0x7f09002e
+			public const int pref_default_notification_time = 2131296302;
+			
+			// aapt resource value: 0x7f09002b
+			public const int pref_notification_time = 2131296299;
+			
+			// aapt resource value: 0x7f09002c
+			public const int pref_notification_time_summary = 2131296300;
+			
+			// aapt resource value: 0x7f09002d
+			public const int pref_notification_time_summary_selected = 2131296301;
 			
 			// aapt resource value: 0x7f090031
-			public const int pref_units_imperial = 2131296305;
+			public const int pref_time_negative_response = 2131296305;
 			
 			// aapt resource value: 0x7f090030
-			public const int pref_units_metric = 2131296304;
+			public const int pref_time_positive_response = 2131296304;
+			
+			// aapt resource value: 0x7f090032
+			public const int pref_units = 2131296306;
+			
+			// aapt resource value: 0x7f090034
+			public const int pref_units_imperial = 2131296308;
+			
+			// aapt resource value: 0x7f090033
+			public const int pref_units_metric = 2131296307;
 			
 			// aapt resource value: 0x7f090015
 			public const int search_menu_title = 2131296277;

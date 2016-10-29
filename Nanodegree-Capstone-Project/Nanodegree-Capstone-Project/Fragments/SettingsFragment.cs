@@ -7,6 +7,8 @@ namespace Zacher.Fragments
 {
     public class SettingsFragment : PreferenceFragment, ISharedPreferencesOnSharedPreferenceChangeListener
     {
+        public const int Title = Resource.String.fragment_title_settings;
+
         public const string PreferenceKeyNotificationTime = "prefNotificationTime";
         public const string PreferenceKeyMeasurementUnits = "prefMeasurementUnits";
 

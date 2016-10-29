@@ -76,18 +76,22 @@ namespace Zacher.Activities
             }
 
             this._oldItemId = itemId;
+            int title;
 
             Fragment fragment;
             switch (itemId)
             {
                 case Resource.Id.NavItemForecast:
                     fragment = ForecastFragment.NewInstance();
+                    title = ForecastFragment.Title;
                     break;
                 case Resource.Id.NavItemRadar:
                     fragment = RadarFragment.NewInstance();
+                    title = RadarFragment.Title;
                     break;
                 case Resource.Id.NavItemSettings:
                     fragment = SettingsFragment.NewInstance();
+                    title = SettingsFragment.Title;
                     break;
 
                 default:
@@ -95,6 +99,10 @@ namespace Zacher.Activities
                     return;
             }
 
+            // set the title
+            this.Title = this.GetString(title);
+
+            // inject the selected fragment
             this.FragmentManager.BeginTransaction()
                 .Replace(Resource.Id.ContentFrame, fragment)
                 .Commit();
@@ -102,11 +110,10 @@ namespace Zacher.Activities
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
+            if (item.ItemId == Android.Resource.Id.Home)
             {
-                case Android.Resource.Id.Home:
-                    this._drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
-                    return true;
+                this._drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
+                return true;
             }
             return base.OnOptionsItemSelected(item);
         }
