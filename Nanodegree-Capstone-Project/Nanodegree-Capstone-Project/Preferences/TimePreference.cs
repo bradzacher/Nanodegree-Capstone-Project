@@ -7,6 +7,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using JetBrains.Annotations;
+using Zacher.Model;
 using Object = Java.Lang.Object;
 
 namespace Zacher.Preferences
@@ -18,6 +19,8 @@ namespace Zacher.Preferences
     [UsedImplicitly]
     public sealed class TimePreference : DialogPreference
     {
+        private readonly SettingsModel _settings;
+
         private int _lastHour;
         private int _lastMinute;
         private TimePicker _picker;
@@ -33,6 +36,7 @@ namespace Zacher.Preferences
         {
             this.SetPositiveButtonText(Resource.String.pref_time_positive_response);
             this.SetNegativeButtonText(Resource.String.pref_time_negative_response);
+            this._settings = new SettingsModel(ctx);
         }
         
         /// <inheritdoc />
@@ -79,11 +83,6 @@ namespace Zacher.Preferences
             return a.GetString(index);
         }
 
-        private string GetDefaultValue()
-        {
-            return this.Context.GetString(Resource.String.pref_default_notification_time);
-        }
-
         /// <inheritdoc />
         protected override void OnSetInitialValue(bool restoreValue, Object defaultValue)
         {
@@ -91,7 +90,7 @@ namespace Zacher.Preferences
 
             if (restoreValue)
             {
-                time = this.GetPersistedString(defaultValue?.ToString() ?? this.GetDefaultValue());
+                time = this.GetPersistedString(defaultValue?.ToString() ?? this._settings.MeasurementUnitsDefault);
             }
             else
             {
@@ -109,7 +108,7 @@ namespace Zacher.Preferences
         /// <returns>The selected time formatted as a 24-hr time</returns>
         public string GetValue()
         {
-            return this.GetPersistedString(this.GetDefaultValue());
+            return this.GetPersistedString(this._settings.MeasurementUnitsDefault);
         }
     }
 }

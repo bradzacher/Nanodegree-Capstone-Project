@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <TextView
-        android:text="@string/fragment1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+
+<android.support.v4.widget.SwipeRefreshLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/SwipeRefresh"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+      <!-- forecast graph -->
+      <LinearLayout
+        android:id="@+id/ForecastGraph"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center" />
-</LinearLayout>
+        android:layout_height="192dp">
+        <TextView
+          android:text="Placeholder for the graph"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center" />
+      </LinearLayout>
+      <!-- forecast table -->
+      <TableLayout
+        android:id="@+id/ForecastTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:padding="8dp" />
+    </LinearLayout>
+  </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -2210,32 +2210,41 @@ namespace Zacher
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f07007d
+			public const int ContentFrame = 2131165309;
+			
 			// aapt resource value: 0x7f07007a
-			public const int ContentFrame = 2131165306;
-			
-			// aapt resource value: 0x7f070077
-			public const int DrawerLayout = 2131165303;
-			
-			// aapt resource value: 0x7f07008d
-			public const int NavItemForecast = 2131165325;
-			
-			// aapt resource value: 0x7f07008e
-			public const int NavItemRadar = 2131165326;
-			
-			// aapt resource value: 0x7f07008f
-			public const int NavItemSettings = 2131165327;
-			
-			// aapt resource value: 0x7f07007b
-			public const int NavView = 2131165307;
-			
-			// aapt resource value: 0x7f070079
-			public const int Toolbar = 2131165305;
+			public const int DrawerLayout = 2131165306;
 			
 			// aapt resource value: 0x7f070078
-			public const int ToolbarLayout = 2131165304;
+			public const int ForecastGraph = 2131165304;
+			
+			// aapt resource value: 0x7f070079
+			public const int ForecastTable = 2131165305;
+			
+			// aapt resource value: 0x7f070090
+			public const int NavItemForecast = 2131165328;
+			
+			// aapt resource value: 0x7f070091
+			public const int NavItemRadar = 2131165329;
+			
+			// aapt resource value: 0x7f070092
+			public const int NavItemSettings = 2131165330;
+			
+			// aapt resource value: 0x7f07007e
+			public const int NavView = 2131165310;
+			
+			// aapt resource value: 0x7f070077
+			public const int SwipeRefresh = 2131165303;
 			
 			// aapt resource value: 0x7f07007c
-			public const int action0 = 2131165308;
+			public const int Toolbar = 2131165308;
+			
+			// aapt resource value: 0x7f07007b
+			public const int ToolbarLayout = 2131165307;
+			
+			// aapt resource value: 0x7f07007f
+			public const int action0 = 2131165311;
 			
 			// aapt resource value: 0x7f07005e
 			public const int action_bar = 2131165278;
@@ -2261,8 +2270,8 @@ namespace Zacher
 			// aapt resource value: 0x7f07005f
 			public const int action_context_bar = 2131165279;
 			
-			// aapt resource value: 0x7f070080
-			public const int action_divider = 2131165312;
+			// aapt resource value: 0x7f070083
+			public const int action_divider = 2131165315;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2306,8 +2315,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070047
 			public const int buttonPanel = 2131165255;
 			
-			// aapt resource value: 0x7f07007d
-			public const int cancel_action = 2131165309;
+			// aapt resource value: 0x7f070080
+			public const int cancel_action = 2131165312;
 			
 			// aapt resource value: 0x7f07002c
 			public const int center = 2131165228;
@@ -2321,8 +2330,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070055
 			public const int checkbox = 2131165269;
 			
-			// aapt resource value: 0x7f070083
-			public const int chronometer = 2131165315;
+			// aapt resource value: 0x7f070086
+			public const int chronometer = 2131165318;
 			
 			// aapt resource value: 0x7f070035
 			public const int clip_horizontal = 2131165237;
@@ -2372,8 +2381,8 @@ namespace Zacher
 			// aapt resource value: 0x7f07001d
 			public const int end = 2131165213;
 			
-			// aapt resource value: 0x7f070088
-			public const int end_padder = 2131165320;
+			// aapt resource value: 0x7f07008b
+			public const int end_padder = 2131165323;
 			
 			// aapt resource value: 0x7f070026
 			public const int enterAlways = 2131165222;
@@ -2411,8 +2420,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070045
 			public const int icon = 2131165253;
 			
-			// aapt resource value: 0x7f070089
-			public const int icon_frame = 2131165321;
+			// aapt resource value: 0x7f07008c
+			public const int icon_frame = 2131165324;
 			
 			// aapt resource value: 0x7f070021
 			public const int ifRoom = 2131165217;
@@ -2420,8 +2429,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070042
 			public const int image = 2131165250;
 			
-			// aapt resource value: 0x7f070087
-			public const int info = 2131165319;
+			// aapt resource value: 0x7f07008a
+			public const int info = 2131165322;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2429,14 +2438,14 @@ namespace Zacher
 			// aapt resource value: 0x7f070030
 			public const int left = 2131165232;
 			
-			// aapt resource value: 0x7f070081
-			public const int line1 = 2131165313;
+			// aapt resource value: 0x7f070084
+			public const int line1 = 2131165316;
 			
-			// aapt resource value: 0x7f070085
-			public const int line3 = 2131165317;
+			// aapt resource value: 0x7f070088
+			public const int line3 = 2131165320;
 			
-			// aapt resource value: 0x7f07008b
-			public const int list = 2131165323;
+			// aapt resource value: 0x7f07008e
+			public const int list = 2131165326;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
@@ -2444,8 +2453,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070044
 			public const int list_item = 2131165252;
 			
-			// aapt resource value: 0x7f07007f
-			public const int media_actions = 2131165311;
+			// aapt resource value: 0x7f070082
+			public const int media_actions = 2131165314;
 			
 			// aapt resource value: 0x7f07001e
 			public const int middle = 2131165214;
@@ -2564,8 +2573,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070048
 			public const int spacer = 2131165256;
 			
-			// aapt resource value: 0x7f07008a
-			public const int spinner = 2131165322;
+			// aapt resource value: 0x7f07008d
+			public const int spinner = 2131165325;
 			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
@@ -2582,8 +2591,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070032
 			public const int start = 2131165234;
 			
-			// aapt resource value: 0x7f07007e
-			public const int status_bar_latest_event_content = 2131165310;
+			// aapt resource value: 0x7f070081
+			public const int status_bar_latest_event_content = 2131165313;
 			
 			// aapt resource value: 0x7f070058
 			public const int submenuarrow = 2131165272;
@@ -2591,17 +2600,17 @@ namespace Zacher
 			// aapt resource value: 0x7f070069
 			public const int submit_area = 2131165289;
 			
-			// aapt resource value: 0x7f07008c
-			public const int switchWidget = 2131165324;
+			// aapt resource value: 0x7f07008f
+			public const int switchWidget = 2131165327;
 			
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f070086
-			public const int text = 2131165318;
+			// aapt resource value: 0x7f070089
+			public const int text = 2131165321;
 			
-			// aapt resource value: 0x7f070084
-			public const int text2 = 2131165316;
+			// aapt resource value: 0x7f070087
+			public const int text2 = 2131165319;
 			
 			// aapt resource value: 0x7f070050
 			public const int textSpacerNoButtons = 2131165264;
@@ -2609,8 +2618,8 @@ namespace Zacher
 			// aapt resource value: 0x7f070076
 			public const int text_input_password_toggle = 2131165302;
 			
-			// aapt resource value: 0x7f070082
-			public const int time = 2131165314;
+			// aapt resource value: 0x7f070085
+			public const int time = 2131165317;
 			
 			// aapt resource value: 0x7f070046
 			public const int title = 2131165254;
@@ -2916,8 +2925,8 @@ namespace Zacher
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090038
-			public const int LogTag = 2131296312;
+			// aapt resource value: 0x7f090039
+			public const int LogTag = 2131296313;
 			
 			// aapt resource value: 0x7f090002
 			public const int abc_action_bar_home_description = 2131296258;
@@ -3024,14 +3033,17 @@ namespace Zacher
 			// aapt resource value: 0x7f090025
 			public const int character_counter_pattern = 2131296293;
 			
-			// aapt resource value: 0x7f090035
-			public const int fragment1 = 2131296309;
-			
-			// aapt resource value: 0x7f090036
-			public const int fragment2 = 2131296310;
+			// aapt resource value: 0x7f090038
+			public const int forecast_table_header_rain_amount = 2131296312;
 			
 			// aapt resource value: 0x7f090037
-			public const int fragment3 = 2131296311;
+			public const int forecast_table_header_rain_chance = 2131296311;
+			
+			// aapt resource value: 0x7f090036
+			public const int forecast_table_header_temp = 2131296310;
+			
+			// aapt resource value: 0x7f090035
+			public const int forecast_table_header_time = 2131296309;
 			
 			// aapt resource value: 0x7f090027
 			public const int fragment_title_forecast = 2131296295;

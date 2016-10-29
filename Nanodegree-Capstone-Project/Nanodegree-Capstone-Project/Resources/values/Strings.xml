@@ -8,6 +8,7 @@
   
   <string name="menu">Menu</string>
 
+  <!-- preference strings -->
   <string name="pref_notification_time">Notification Time</string>
   <string name="pref_notification_time_summary">The time you\'d like to receive a notification each day.</string>
   <string name="pref_notification_time_summary_selected">You\'ll receive a notification at %s each day.</string>
@@ -21,10 +22,11 @@
   <string name="pref_units_metric">Metric</string>
   <string name="pref_units_imperial">Imperial</string>
   
+  <!-- forecast strings -->
+  <string name="forecast_table_header_time">Time</string>
+  <string name="forecast_table_header_temp">Temp.</string>
+  <string name="forecast_table_header_rain_chance">Chance</string>
+  <string name="forecast_table_header_rain_amount">Total Rain</string>
   
-  <string name="fragment1">You are on Forecast Fragment</string>
-  <string name="fragment2">You are on Radar Fragment</string>
-  <string name="fragment3">You are on Settings Fragment</string>
-
   <string name="LogTag" translatable="false">ZacherCapstone</string>
 </resources>

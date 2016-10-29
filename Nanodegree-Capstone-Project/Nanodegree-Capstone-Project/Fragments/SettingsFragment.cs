@@ -1,6 +1,7 @@
 using Android.Content;
 using Android.OS;
 using Android.Preferences;
+using Zacher.Model;
 using Zacher.Preferences;
 
 namespace Zacher.Fragments
@@ -9,16 +10,13 @@ namespace Zacher.Fragments
     {
         public const int Title = Resource.String.fragment_title_settings;
 
-        public const string PreferenceKeyNotificationTime = "prefNotificationTime";
-        public const string PreferenceKeyMeasurementUnits = "prefMeasurementUnits";
-
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             
             this.AddPreferencesFromResource(Resource.Xml.settings);
-            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, PreferenceKeyMeasurementUnits);
-            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, PreferenceKeyNotificationTime);
+            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, SettingsModel.PreferenceKeyMeasurementUnits);
+            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, SettingsModel.PreferenceKeyNotificationTime);
         }
 
         public override void OnResume()
@@ -44,12 +42,12 @@ namespace Zacher.Fragments
         public void OnSharedPreferenceChanged(ISharedPreferences sharedPreferences, string key)
         {
             // make the selected measurement unit value visible
-            if (key == PreferenceKeyMeasurementUnits)
+            if (key == SettingsModel.PreferenceKeyMeasurementUnits)
             {
                 var pref = (ListPreference) this.FindPreference(key);
                 pref.Summary = pref.Entry;
             }
-            else if (key == PreferenceKeyNotificationTime)
+            else if (key == SettingsModel.PreferenceKeyNotificationTime)
             {
                 var pref = (TimePreference) this.FindPreference(key);
                 string currentVal = pref.GetValue();

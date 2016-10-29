@@ -52,6 +52,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -107,6 +108,8 @@
     <Compile Include="Fragments\ForecastFragment.cs" />
     <Compile Include="Fragments\SettingsFragment.cs" />
     <Compile Include="Fragments\RadarFragment.cs" />
+    <Compile Include="Model\ForecastViewModel.cs" />
+    <Compile Include="Model\SettingsModel.cs" />
     <Compile Include="Preferences\TimePreference.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,6 +186,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_black_36dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_input_antenna_black_36dp.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
