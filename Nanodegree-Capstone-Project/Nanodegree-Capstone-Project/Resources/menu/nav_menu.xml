@@ -4,15 +4,15 @@
   <group android:checkableBehavior="single">
     <item
         android:id="@+id/NavItemForecast"
-        android:icon="@drawable/ic_home_1"
+        android:icon="@drawable/ic_date_range_black_36dp"
         android:title="Forecast" />
     <item
         android:id="@+id/NavItemRadar"
-        android:icon="@drawable/ic_home_2"
+        android:icon="@drawable/ic_network_check_black_36dp"
         android:title="Radar" />
     <item
         android:id="@+id/NavItemSettings"
-        android:icon="@drawable/ic_home_2"
+        android:icon="@drawable/ic_settings_black_36dp"
         android:title="Settings" />
   </group>
 
