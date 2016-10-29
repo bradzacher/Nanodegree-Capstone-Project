@@ -165,7 +165,6 @@
     <XamarinComponentReference Include="NChart3D">
       <Visible>False</Visible>
       <Version>2.6</Version>
-      <InstallationInProgress>True</InstallationInProgress>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
