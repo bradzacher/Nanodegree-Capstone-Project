@@ -49,9 +49,6 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="NChart3D">
-      <HintPath>..\Components\NChart3D-2.5\lib\android\NChart3D.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -160,12 +157,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_menu.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_menu.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="NChart3D">
-      <Visible>False</Visible>
-      <Version>2.6</Version>
-    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
