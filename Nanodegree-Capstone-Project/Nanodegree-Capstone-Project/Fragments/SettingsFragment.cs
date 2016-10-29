@@ -1,16 +1,36 @@
+using Android.Content;
 using Android.OS;
-using Android.Support.V4.App;
-using Android.Views;
+using Android.Preferences;
+using Zacher.Preferences;
 
 namespace Zacher.Fragments
 {
-    public class SettingsFragment : Fragment
+    public class SettingsFragment : PreferenceFragment, ISharedPreferencesOnSharedPreferenceChangeListener
     {
+        public const string PreferenceKeyNotificationTime = "prefNotificationTime";
+        public const string PreferenceKeyMeasurementUnits = "prefMeasurementUnits";
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
+            this.AddPreferencesFromResource(Resource.Xml.settings);
+            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, PreferenceKeyMeasurementUnits);
+            this.OnSharedPreferenceChanged(this.PreferenceScreen.SharedPreferences, PreferenceKeyNotificationTime);
+        }
 
-            // Create your fragment here
+        public override void OnResume()
+        {
+            base.OnResume();
+
+            this.PreferenceScreen.SharedPreferences.RegisterOnSharedPreferenceChangeListener(this);
+        }
+
+        public override void OnPause()
+        {
+            base.OnPause();
+
+            this.PreferenceScreen.SharedPreferences.UnregisterOnSharedPreferenceChangeListener(this);
         }
 
         // ReSharper disable once UnusedMember.Global
@@ -19,11 +39,20 @@ namespace Zacher.Fragments
             return new SettingsFragment { Arguments = new Bundle() };
         }
 
-
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        public void OnSharedPreferenceChanged(ISharedPreferences sharedPreferences, string key)
         {
-            View ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.settings_fragment, null);
+            // make the selected measurement unit value visible
+            if (key == PreferenceKeyMeasurementUnits)
+            {
+                var pref = (ListPreference) this.FindPreference(key);
+                pref.Summary = pref.Entry;
+            }
+            else if (key == PreferenceKeyNotificationTime)
+            {
+                var pref = (TimePreference) this.FindPreference(key);
+                string currentVal = pref.GetValue();
+                pref.Summary = this.GetString(Resource.String.pref_notification_time_summary_selected, currentVal);
+            }
         }
     }
 }

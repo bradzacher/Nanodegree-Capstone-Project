@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  
+  <zacher.preferences.TimePreference
+    android:key="prefNotificationTime"
+    android:title="@string/pref_notification_time"
+    android:summary="@string/pref_notification_time_summary"
+    android:defaultValue="@string/pref_default_notification_time" />
+  
+  <ListPreference
+    android:key="prefMeasurementUnits"
+    android:title="@string/pref_units"
+    android:dialogTitle="@string/pref_units"
+    android:entries="@array/pref_units_entries"
+    android:entryValues="@array/pref_units_values"
+    android:defaultValue="@string/pref_default_measurement_units"/>
+  
+</PreferenceScreen>

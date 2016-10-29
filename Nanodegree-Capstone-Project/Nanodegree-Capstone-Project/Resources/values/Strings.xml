@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">Rain Notifier</string>
-  <string name="drawer_open">Open</string>
-  <string name="drawer_close">Close</string>
-  <string name="menu_refresh">Refresh</string>
+  
+  <string name="menu">Menu</string>
+
+  <string name="pref_notification_time">Notification Time</string>
+  <string name="pref_notification_time_summary">The time you\'d like to receive a notification each day.</string>
+  <string name="pref_notification_time_summary_selected">You\'ll receive a notification at %s each day.</string>
+  <string name="pref_default_notification_time">8:00</string>
+  <string name="pref_default_measurement_units">@string/pref_units_metric</string>
+  
+  <string name="pref_time_positive_response">Set</string>
+  <string name="pref_time_negative_response">Cancel</string>
+
+  <string name="pref_units">Measurement Units</string>
+  <string name="pref_units_metric">Metric</string>
+  <string name="pref_units_imperial">Imperial</string>
+  
+  
   <string name="fragment1">You are on Forecast Fragment</string>
   <string name="fragment2">You are on Radar Fragment</string>
   <string name="fragment3">You are on Settings Fragment</string>

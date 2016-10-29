@@ -1,5 +1,5 @@
 using Android.OS;
-using Android.Support.V4.App;
+using Android.App;
 using Android.Views;
 
 namespace Zacher.Fragments

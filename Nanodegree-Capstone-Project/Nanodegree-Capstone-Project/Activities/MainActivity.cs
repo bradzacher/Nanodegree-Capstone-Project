@@ -1,7 +1,8 @@
-using Android.Support.V4.App;
+using Android.App;
 using Android.Content.PM;
 using Android.Net.Http;
 using Android.OS;
+using Android.Preferences;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Util;
@@ -11,7 +12,7 @@ using Zacher.Fragments;
 
 namespace Zacher.Activities
 {
-    [Android.App.Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
+    [Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
     // ReSharper disable once UnusedMember.Global
     public class MainActivity : BaseActivity
     {
@@ -25,7 +26,10 @@ namespace Zacher.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            
+         
+            // init the settings
+            PreferenceManager.SetDefaultValues(this, Resource.Xml.settings, false);
+               
             this._drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.DrawerLayout);
 
             // Set hamburger items menu
@@ -91,7 +95,7 @@ namespace Zacher.Activities
                     return;
             }
 
-            this.SupportFragmentManager.BeginTransaction()
+            this.FragmentManager.BeginTransaction()
                 .Replace(Resource.Id.ContentFrame, fragment)
                 .Commit();
         }
